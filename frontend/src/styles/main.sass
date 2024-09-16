@@ -1,0 +1,122 @@
+@use 'variables'
+@use 'mixins'
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap')
+
+* 
+   padding: 0
+   margin: 0
+   box-sizing: border-box
+   font-family: "Inter", sans-serif
+   
+
+.login-register
+   display: grid
+   grid-template-columns: 1fr 1fr
+   width: 100vw
+   height: 100vh
+
+   .container-img
+      background-color: variables.$primary-color
+      height: 100%
+      @include mixins.flex-center
+
+      img
+         width: 500px
+         height: 500px
+      
+   .container-form
+      height: 100%
+      width: 100%
+      @include mixins.flex-center
+      
+      &-content
+         
+
+         .title
+            font-size: 1.5rem
+            margin-bottom: 10px
+
+         label
+            color: variables.$label-color
+            font-size: 0.75rem
+            font-weight: 500
+            
+         .login-message, .signup-message
+            color: variables.$text-color
+
+         .login-message
+            width: 335px
+            margin-bottom: 25px
+            font-size: 0.875rem
+            line-height: 1.5
+
+         .label-input
+            @include mixins.flex-gap
+            gap: 7px
+
+         .btn, .input
+            width: 335px
+            height: 45px
+            border-radius: 6px
+
+         .input
+            border: 1px solid variables.$text-color
+            padding-left: 15px
+            outline: 0
+            color: variables.$text-input-color
+         
+
+         
+         .input:focus
+            border: 1.5px solid variables.$button-color
+            box-shadow: 1px 6px 27px -11px rgba(0,0,0,0.38)
+         
+         .btn
+            border: none
+            background-color: variables.$primary-color
+            color: variables.$secondary-color
+            margin-top: 10px
+            cursor: pointer
+         form
+            @include mixins.flex-gap
+            gap: 10px
+
+         .link-register
+            color: variables.$primary-color
+            text-decoration: none
+
+         .signup-message
+            margin-top: 25px
+            font-size: 0.875rem
+            text-align: center
+
+         .erro-input
+            color: red
+            font-size: 0.75rem
+            position: relative
+            bottom: 6px
+            margin-left: 3px
+
+.home
+   @include mixins.flex-center
+   width: 100%
+   height: 100vh
+
+   &-btn
+      border: none
+      border-radius: 6px
+      width: 100px
+      height: 40px
+      background-color: variables.$primary-color
+      color: variables.$secondary-color
+      cursor: pointer
+   &-btn:hover
+      background-color: variables.$button-color
+      
+   
+
+   
+      
+
+      
+
